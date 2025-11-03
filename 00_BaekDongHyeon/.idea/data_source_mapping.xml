@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$PROJECT_DIR$/01_select.sql" value="20cb81fa-b1f3-48fd-96ce-df082a8dac57" />
+    <file url="file://$PROJECT_DIR$/02_order_by.sql" value="20cb81fa-b1f3-48fd-96ce-df082a8dac57" />
+    <file url="file://$PROJECT_DIR$/03_where.sql" value="20cb81fa-b1f3-48fd-96ce-df082a8dac57" />
+  </component>
+</project>

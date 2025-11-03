@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$PROJECT_DIR$/01_select.sql" value="f9d09588-c802-45e1-b9a9-ef98a617b693" />
+    <file url="file://$PROJECT_DIR$/02_order_by.sql" value="f9d09588-c802-45e1-b9a9-ef98a617b693" />
+    <file url="file://$PROJECT_DIR$/03_where.sql" value="f9d09588-c802-45e1-b9a9-ef98a617b693" />
+    <file url="file://$PROJECT_DIR$/17_계정생성.sql" value="8abe9c86-47eb-42b8-b832-ce099c4360e1" />
+    <file url="file://$PROJECT_DIR$/db_script.sql" value="f9d09588-c802-45e1-b9a9-ef98a617b693" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/8abe9c86-47eb-42b8-b832-ce099c4360e1/console.sql" value="8abe9c86-47eb-42b8-b832-ce099c4360e1" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/f9d09588-c802-45e1-b9a9-ef98a617b693/console.sql" value="f9d09588-c802-45e1-b9a9-ef98a617b693" />
+  </component>
+</project>
