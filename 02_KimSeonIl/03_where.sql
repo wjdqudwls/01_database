@@ -172,3 +172,135 @@ OR menu_price = 9000)
 AND menu_code > 6;
 
 
+/*
+ SELECT
+
+ 3:SELECT - 컬럼필터링
+ 1:FROM - 테이블 필터링
+ 2:WHERE - 행 필터링
+ 4:ORDER BY - 결과셋 정렬
+ */
+
+ -- BETWEEN A AND B : A 이상 B 이하 범위를 나타낸다.
+
+SELECT *
+FROM tbl_menu
+WHERE
+    #menu_price >= 10000 AND menu_price <= 25000
+menu_price BETWEEN 10000 AND 25000
+ORDER BY menu_price ASC;
+
+
+
+ -- BETWEEN A AND B : A 이상 B 이하 범위를 나타낸다.
+
+SELECT *
+FROM tbl_menu
+WHERE
+#     menu_price < 10000 OR menu_price > 25000
+    menu_price NOT BETWEEN 10000 AND 25000
+ORDER BY menu_price ASC;
+
+/* LIKE 연산자
+ - 와일드카드를 이용해 문자열 패턴이 일치하면 조회
+ - % : 포함
+ - _ : 글자 개수
+ */
+
+
+-- %문자열 : 해당 문자열로 끝남
+ SELECT menu_name
+ from tbl_menu
+WHERE menu_name LIKE '%아메리카노';
+
+-- 문자열% : 해당 문자열로 시작
+ SELECT menu_name
+ from tbl_menu
+WHERE menu_name LIKE '죽%';
+
+
+-- %문자열% : 해당 문자열이 포함(처음, 중간, 끝 관계 없음)
+ SELECT menu_name
+ from tbl_menu
+WHERE menu_name LIKE '%마늘%';
+
+-- _ : 글자 갯수
+ SELECT menu_name
+ from tbl_menu
+WHERE menu_name LIKE '_____'; -- 5글자 메뉴명만 조회
+
+-- 마늘 앞에 꼭 1글자, 뒤에는 관계없음
+SELECT menu_name
+from tbl_menu
+WHERE menu_name LIKE '_마늘%';
+
+-- NOT LIKE : 문자열 패턴이 일치하지 않는 데이터만 조회
+SELECT menu_name
+from tbl_menu
+WHERE menu_name NOT LIKE '_마늘%';
+
+/*
+ _, % 와일드카드 사용 시
+ 문자열인지 와일드카드인지 구분해서 사용하는 방법
+ 1)ESCAPE OPTION
+ 2) \(백슬래시) ESCAPE 문자
+ */
+
+
+
+ -- ESCAPE OPTION을 이용해서 와일드카드 -> 문자열로 탈출
+ SELECT *
+ FROM tbl_temp
+ WHERE temp_email LIKE '___#_%' ESCAPE '#';
+
+-- \(백슬래시)로 문자열 구분
+ SELECT *
+ FROM tbl_temp
+ WHERE temp_email LIKE '___\_%' ;
+
+/* IN / NOT IN
+   - 찾는  값이 () 안에 있으면 결과에 포함
+    == OR 연산을 연달아 작성하는 효과
+ */
+
+SELECT *
+FROM tbl_menu
+WHERE category_code =4
+OR category_code = 5
+OR category_code = 6
+OR category_code = 10
+order by category_code asc;
+
+SELECT * FROM tbl_menu
+WHERE category_code IN(4,5,6,10)
+order by category_code asc;
+
+SELECT * FROM tbl_menu
+WHERE category_code NOT IN(4,5,6,10)
+order by category_code asc;
+
+/* NULL
+  - NULL == 빈칸 (값 x)
+   --> 비교 연산 불가능
+ */
+
+ SELECT  *
+ FROM tbl_category
+ WHERE ref_category_code = NULL;
+
+-- IS NULL : 해당 컬럼의 값이 NULL(빈칸) 이면 TRUE -> 결과 포함
+
+-- 빈칸인것들만 조회한다.
+SELECT *
+FROM tbl_category
+WHERE ref_category_code IS NULL;
+
+-- 빈칸이 아니면 조회
+SELECT *
+FROM tbl_category
+WHERE ref_category_code IS NOT NULL;
+
+-- WHERE 절 끝
+
+# 문제
+

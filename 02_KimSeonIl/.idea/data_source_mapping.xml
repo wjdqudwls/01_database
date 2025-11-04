@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourcePerFileMappings">
-    <file url="file://$PROJECT_DIR$/00_계정생성.sql" value="81c3c7cc-950b-4292-b75b-ce698322cfdc" />
+    <file url="file://$PROJECT_DIR$/00_계정생성.sql" value="fc2e8002-d5d0-4d77-afeb-94df81c3d8bc" />
     <file url="file://$PROJECT_DIR$/01_select.sql" value="81c3c7cc-950b-4292-b75b-ce698322cfdc" />
     <file url="file://$PROJECT_DIR$/02_order_by.sql" value="81c3c7cc-950b-4292-b75b-ce698322cfdc" />
     <file url="file://$PROJECT_DIR$/03_where.sql" value="81c3c7cc-950b-4292-b75b-ce698322cfdc" />
+    <file url="file://$PROJECT_DIR$/04_distinct.sql" value="81c3c7cc-950b-4292-b75b-ce698322cfdc" />
+    <file url="file://$PROJECT_DIR$/05_limit.sql" value="81c3c7cc-950b-4292-b75b-ce698322cfdc" />
+    <file url="file://$PROJECT_DIR$/06_join.sql" value="81c3c7cc-950b-4292-b75b-ce698322cfdc" />
+    <file url="file://$PROJECT_DIR$/07_grouping.sql" value="81c3c7cc-950b-4292-b75b-ce698322cfdc" />
+    <file url="file://$PROJECT_DIR$/08_subquery.sql" value="81c3c7cc-950b-4292-b75b-ce698322cfdc" />
     <file url="file://$PROJECT_DIR$/db_script.sql" value="81c3c7cc-950b-4292-b75b-ce698322cfdc" />
-    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/81c3c7cc-950b-4292-b75b-ce698322cfdc/console.sql" value="81c3c7cc-950b-4292-b75b-ce698322cfdc" />
+    <file url="file://$PROJECT_DIR$/실습 과제/SELECT~LIMIT_EMPLOYEE_이용.sql" value="c51e7795-7e7b-4aee-93b6-8112b60ac215" />
+    <file url="file://$PROJECT_DIR$/실습 과제/SELECT~WHERE 실습문제.sql" value="81c3c7cc-950b-4292-b75b-ce698322cfdc" />
+    <file url="file://$PROJECT_DIR$/실습 과제/employee.sql" value="c51e7795-7e7b-4aee-93b6-8112b60ac215" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/fc2e8002-d5d0-4d77-afeb-94df81c3d8bc/console.sql" value="fc2e8002-d5d0-4d77-afeb-94df81c3d8bc" />
   </component>
 </project>
