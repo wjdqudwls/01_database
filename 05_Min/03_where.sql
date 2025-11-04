@@ -164,7 +164,7 @@ SELECT
 FROM
     tbl_menu
 WHERE
-    orderable_status = 'Y' OR category_code = 10
+    orderable_status = 'Y' OR category_code = 10;
 
 -- 메뉴 가격이 5000원 미만, 20000원 이상
 -- 메뉴의 메뉴명, 메뉴가격을 오름차순으로 조회
