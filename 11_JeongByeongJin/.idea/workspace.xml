@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69c91fcb-beb9-4dae-8559-1b6007bab341" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5298e26e-56de-460d-bac4-68f7d40066e0/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5298e26e-56de-460d-bac4-68f7d40066e0/storage_v2/_src_/schema/mysql.osA4Bg.zip" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/09_set_operators.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10_dml.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/실습과제/20251105_SET_OPERATORS까지.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/data_source_mapping.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/data_source_mapping.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/08_subquery.sql" beforeDir="false" afterPath="$PROJECT_DIR$/08_subquery.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +26,9 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="350TqP8hPr1dh8s0VvrX5Xeo0Qw" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
