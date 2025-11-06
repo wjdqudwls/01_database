@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="root@localhost" uuid="8876c191-8900-4124-aa5a-bb5a0640537c">
+    <data-source source="LOCAL" name="root@localhost" uuid="5298e26e-56de-460d-bac4-68f7d40066e0">
       <driver-ref>mariadb</driver-ref>
       <synchronize>true</synchronize>
-      <remarks>root 관리자 계정</remarks>
       <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mariadb://localhost:3306</jdbc-url>
+      <jdbc-additional-properties>
+        <property name="database.introspection.mysql.dbe5060" value="true" />
+      </jdbc-additional-properties>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="swcamp@%/menudb" uuid="06d6dc17-8ae7-4f6c-9e05-8bd4ff8042dc">
+    <data-source source="LOCAL" name="swcamp@%/menudb" uuid="c5ba9af5-2a65-4e9e-8f5e-3efe24ffb030">
       <driver-ref>mariadb</driver-ref>
       <synchronize>true</synchronize>
       <remarks>swcamp 계정 menudb 데이터베이스</remarks>
       <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mariadb://localhost:3306/menudb</jdbc-url>
+      <jdbc-additional-properties>
+        <property name="database.introspection.mysql.dbe5060" value="true" />
+      </jdbc-additional-properties>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="practice@%/employeedb" uuid="b787b84d-64ee-4d3a-9e2c-72893fc66cd8">
+      <driver-ref>mariadb</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mariadb://localhost:3306/employeedb</jdbc-url>
       <jdbc-additional-properties>
         <property name="database.introspection.mysql.dbe5060" value="true" />
       </jdbc-additional-properties>

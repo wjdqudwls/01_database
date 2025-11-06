@@ -28,7 +28,7 @@ show databases;
 
 -- swcamp 계정에 권한 확인
 show grants for 'swcamp'@'%';
--- 결과
+-- 결과 : 아무 권한 없음
 -- GRANT USAGE ON *.* TO `swcamp`@`%` IDENTIFIED BY PASSWORD '*79E90CE019B4B08AC1D2DBC22BECE6B3E6A682F7'
 
 -- swcamp 계정에 menudb 데이터 베이스 모든 권한을 부여
@@ -36,7 +36,7 @@ grant all privileges on menudb.* to 'swcamp'@'%';
 
 -- swcamp 계정에 권한 추가 확인
 show grants for 'swcamp'@'%';
--- 결과
+-- 결과 : menudb에 대하 swcamp가 모든 권한을 가짐
 -- GRANT USAGE ON *.* TO `swcamp`@`%` IDENTIFIED BY PASSWORD '*79E90CE019B4B08AC1D2DBC22BECE6B3E6A682F7'
 -- GRANT ALL PRIVILEGES ON `menudb`.* TO `swcamp`@`%`
 

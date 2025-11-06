@@ -36,3 +36,7 @@ show grants for 'swcamp'@'%';
 
 -- menudb 데이터 베이스 사용하기
 use menudb;
+
+DROP USER IF EXISTS 'practice'@'localhost';
+CREATE USER 'practice'@'localhost' IDENTIFIED BY 'practice';
+GRANT ALL PRIVILEGES ON employeedb.* TO 'practice'@'localhost';

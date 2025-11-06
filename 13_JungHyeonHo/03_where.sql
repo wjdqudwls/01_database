@@ -159,7 +159,89 @@ WHERE category_code = 4 OR menu_price = 9000 AND menu_code>10;
 
 /*---------------------------------------------------------------------*/
  /*
- 2) 논리 연산자
-
+ 3) LIKE 연산자
+ -- 문자열% : 해당 문자열로 끝남
+ -- %문자열 : 해당 문자열로 시작함
+ -- %문자열% : 문자열이 포함됨
+ -- ___ : 3글자인 데이터 조회
  */
+    SELECT tbl_menu.menu_name
+    FROM tbl_menu
+    WHERE menu_name LIKE '코%';
+
+    SELECT tbl_menu.menu_name
+    FROM tbl_menu
+    WHERE menu_name LIKE '%빵';
+
+    SELECT tbl_menu.menu_name
+    FROM tbl_menu
+    WHERE menu_name LIKE '%마늘%';
+
+    SELECT tbl_menu.menu_name
+    FROM tbl_menu
+    WHERE menu_name LIKE '%마늘_____';   -- 5글자 메뉴명만 조회
+
+-- NOT LIKE : 문자열 패턴이 일치하지 않는 데이터만 조회
+
+    SELECT tbl_menu.menu_name
+    FROM tbl_menu
+    WHERE menu_name NOT LIKE '%마늘_____';   -- 5글자 메뉴명만 조회
+
+/*
+ 만약 4번째 글자가 ‘_’인 자료를 찾고 싶다면?
+⇒ Like ‘____%’ 를 쓰면 4글자 이상인 자료를 찾게 됨
+⇒ % 와일드 카드를 사용하면 됨
+ */
+
+SELECT *
+FROM tbl_temp
+WHERE temp_email LIKE '___!_%' ESCAPE '!';
+
+/*---------------------------------------------------------------------*/
+/*
+4) IN/ NOT IN
+- 찾는 값이 ( ) 안에 있으면 결과에 포함
+
+    == OR 연산을 연달아 작성하는 효과
+ */
+SELECT *
+FROM tbl_menu t
+WHERE category_code = 4
+OR category_code = 5
+OR category_code = 6
+OR category_code = 7
+ORDER BY  category_code ASC;
+
+-- =>
+
+SELECT *
+FROM tbl_menu t
+WHERE category_code IN (4,5,6,10)
+ORDER BY  category_code ASC;
+
+SELECT *
+FROM tbl_menu t
+WHERE category_code NOT IN (4)
+ORDER BY  category_code ASC;
+/*---------------------------------------------------------------------*/
+/*
+ 5) NULL 관련 연산
+
+ - NULL == 빈칸 (값 X)
+ --> 비교연산이 불가능하다!!!
+ */
+SELECT *
+FROM tbl_category
+WHERE ref_category_code = NULL; -- 비교 연산 불가
+
+-- IS NULL
+SELECT *
+FROM tbl_category
+WHERE ref_category_code IS NULL;
+
+-- IS NOT NULL
+SELECT *
+FROM tbl_category
+WHERE ref_category_code IS NOT NULL;
+
 /*---------------------------------------------------------------------*/

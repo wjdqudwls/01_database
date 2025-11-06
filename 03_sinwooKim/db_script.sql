@@ -108,4 +108,17 @@ INSERT INTO tbl_menu VALUES (null, '마라깐쇼한라봉', 22000, 5, 'N');
 
 INSERT INTO tbl_menu VALUES (null, '돌미나리백설기', 5000, 11, 'Y');
 
+CREATE TABLE IF NOT EXISTS tbl_temp
+(
+    temp_code    INT AUTO_INCREMENT COMMENT '임시코드',
+    temp_email    VARCHAR(30) NOT NULL COMMENT '이메일',
+    PRIMARY KEY (temp_code)
+) ENGINE=INNODB COMMENT '임시테이블';
+
+INSERT INTO tbl_temp VALUES(1, 'sun_di@greedy.com');
+INSERT INTO tbl_temp VALUES(2, 'song_jk@greedy.com');
+INSERT INTO tbl_temp VALUES(3, 'no_oc@greedy.com');
+INSERT INTO tbl_temp VALUES(4, 'song_eh@greedy.com');
+INSERT INTO tbl_temp VALUES(5, 'yoo_js@greedy.com');
+
 COMMIT;

@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourcePerFileMappings">
-    <file url="file://$PROJECT_DIR$/00_계정생성.sql" value="8876c191-8900-4124-aa5a-bb5a0640537c" />
-    <file url="file://$PROJECT_DIR$/01_select.sql" value="06d6dc17-8ae7-4f6c-9e05-8bd4ff8042dc" />
-    <file url="file://$PROJECT_DIR$/02.order_by.sql" value="06d6dc17-8ae7-4f6c-9e05-8bd4ff8042dc" />
-    <file url="file://$PROJECT_DIR$/03_where.sql" value="06d6dc17-8ae7-4f6c-9e05-8bd4ff8042dc" />
-    <file url="file://$PROJECT_DIR$/db_script.sql" value="06d6dc17-8ae7-4f6c-9e05-8bd4ff8042dc" />
+    <file url="file://$PROJECT_DIR$/00_계정생성.sql" value="5298e26e-56de-460d-bac4-68f7d40066e0" />
+    <file url="file://$PROJECT_DIR$/03_where.sql" value="b787b84d-64ee-4d3a-9e2c-72893fc66cd8" />
+    <file url="file://$PROJECT_DIR$/08_subquery.sql" value="c5ba9af5-2a65-4e9e-8f5e-3efe24ffb030" />
+    <file url="file://$PROJECT_DIR$/09_set_operators.sql" value="c5ba9af5-2a65-4e9e-8f5e-3efe24ffb030" />
+    <file url="file://$PROJECT_DIR$/10_dml.sql" value="c5ba9af5-2a65-4e9e-8f5e-3efe24ffb030" />
+    <file url="file://$PROJECT_DIR$/11_transaction.sql" value="c5ba9af5-2a65-4e9e-8f5e-3efe24ffb030" />
+    <file url="file://$PROJECT_DIR$/db_script.sql" value="5298e26e-56de-460d-bac4-68f7d40066e0" />
+    <file url="file://$PROJECT_DIR$/실습과제/20251105_SET_OPERATORS까지.sql" value="b787b84d-64ee-4d3a-9e2c-72893fc66cd8" />
+    <file url="file://$PROJECT_DIR$/실습과제/SELECT_LIMIT_실습문제.sql" value="b787b84d-64ee-4d3a-9e2c-72893fc66cd8" />
+    <file url="file://$PROJECT_DIR$/실습과제/SELECT~WHERE_실습문제.sql" value="5298e26e-56de-460d-bac4-68f7d40066e0" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/5298e26e-56de-460d-bac4-68f7d40066e0/console.sql" value="5298e26e-56de-460d-bac4-68f7d40066e0" />
   </component>
 </project>

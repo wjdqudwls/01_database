@@ -5,6 +5,16 @@
     <file url="file://$PROJECT_DIR$/01_select.sql" value="5978bc85-2383-4b35-9da4-5e0485e6db44" />
     <file url="file://$PROJECT_DIR$/02_order_by.sql" value="5978bc85-2383-4b35-9da4-5e0485e6db44" />
     <file url="file://$PROJECT_DIR$/03_where.sql" value="5978bc85-2383-4b35-9da4-5e0485e6db44" />
+    <file url="file://$PROJECT_DIR$/04_distinct.sql" value="5978bc85-2383-4b35-9da4-5e0485e6db44" />
+    <file url="file://$PROJECT_DIR$/05_limit.sql" value="17aa6536-8429-44b3-90d7-021c90bb87d1" />
+    <file url="file://$PROJECT_DIR$/06_join.sql" value="5978bc85-2383-4b35-9da4-5e0485e6db44" />
+    <file url="file://$PROJECT_DIR$/07_grouping.sql" value="5978bc85-2383-4b35-9da4-5e0485e6db44" />
+    <file url="file://$PROJECT_DIR$/08_subquery.sql" value="5978bc85-2383-4b35-9da4-5e0485e6db44" />
+    <file url="file://$PROJECT_DIR$/db_script.sql" value="5978bc85-2383-4b35-9da4-5e0485e6db44" />
+    <file url="file://$PROJECT_DIR$/실습과제/SELECT~LIMIT_실습문제.sql" value="1998a5d9-1d42-4178-bce3-61c03ee364ef" />
+    <file url="file://$PROJECT_DIR$/실습과제/SELECT~WHERE_실습문제.sql" value="17aa6536-8429-44b3-90d7-021c90bb87d1" />
+    <file url="file://$PROJECT_DIR$/실습과제/employee.sql" value="1998a5d9-1d42-4178-bce3-61c03ee364ef" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/1998a5d9-1d42-4178-bce3-61c03ee364ef/console.sql" value="1998a5d9-1d42-4178-bce3-61c03ee364ef" />
     <file url="file://$PROJECT_DIR$/db_script.sql" value="5978bc85-2383-4b35-9da4-5e0485e6db44" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/5978bc85-2383-4b35-9da4-5e0485e6db44/console.sql" value="5978bc85-2383-4b35-9da4-5e0485e6db44" />
   </component>

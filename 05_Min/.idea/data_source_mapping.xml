@@ -4,7 +4,20 @@
     <file url="file://$PROJECT_DIR$/01_select.sql" value="feb1025b-0346-4634-9b46-9f553e48b181" />
     <file url="file://$PROJECT_DIR$/02_order_by.sql" value="feb1025b-0346-4634-9b46-9f553e48b181" />
     <file url="file://$PROJECT_DIR$/03_where.sql" value="feb1025b-0346-4634-9b46-9f553e48b181" />
+    <file url="file://$PROJECT_DIR$/04_distinct.sql" value="feb1025b-0346-4634-9b46-9f553e48b181" />
+    <file url="file://$PROJECT_DIR$/05_limit.sql" value="feb1025b-0346-4634-9b46-9f553e48b181" />
     <file url="file://$PROJECT_DIR$/05_계정생성.sql" value="5ba65d25-628c-44f3-bf11-712516d42b0c" />
+    <file url="file://$PROJECT_DIR$/06_join.sql" value="feb1025b-0346-4634-9b46-9f553e48b181" />
+    <file url="file://$PROJECT_DIR$/07_grouping.sql" value="feb1025b-0346-4634-9b46-9f553e48b181" />
+    <file url="file://$PROJECT_DIR$/08_subquery.sql" value="feb1025b-0346-4634-9b46-9f553e48b181" />
+    <file url="file://$PROJECT_DIR$/09_set_operators.sql" value="feb1025b-0346-4634-9b46-9f553e48b181" />
+    <file url="file://$PROJECT_DIR$/10_dml.sql" value="feb1025b-0346-4634-9b46-9f553e48b181" />
+    <file url="file://$PROJECT_DIR$/11_transaction.sql" value="feb1025b-0346-4634-9b46-9f553e48b181" />
     <file url="file://$PROJECT_DIR$/db_script.sql" value="feb1025b-0346-4634-9b46-9f553e48b181" />
+    <file url="file://$PROJECT_DIR$/개인연습.sql" value="f16b9daf-84a0-4ac4-91d9-4693e80aa888" />
+    <file url="file://$PROJECT_DIR$/실습과제/20251105_SET_OPERATORS까지.sql" value="f16b9daf-84a0-4ac4-91d9-4693e80aa888" />
+    <file url="file://$PROJECT_DIR$/실습과제/SELECT_LIMIT_실습과제.sql" value="f16b9daf-84a0-4ac4-91d9-4693e80aa888" />
+    <file url="file://$PROJECT_DIR$/실습과제/SELECT~WHERE_실습문제.sql" value="feb1025b-0346-4634-9b46-9f553e48b181" />
+    <file url="file://$PROJECT_DIR$/실습과제/employee.sql" value="f16b9daf-84a0-4ac4-91d9-4693e80aa888" />
   </component>
 </project>

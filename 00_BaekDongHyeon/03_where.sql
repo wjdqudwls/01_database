@@ -232,3 +232,193 @@ AND
     menu_code > 6;
 
 
+-- BETWEEN A AND B : A 이상 B 이하 범위 지정
+SELECT
+    *
+FROM
+    tbl_menu
+WHERE
+    -- menu_price >= 10000 AND menu_price <= 25000
+    menu_price BETWEEN 10000 AND 25000
+ORDER BY
+    menu_price ASC;
+
+
+
+-- NOT BETWEEN A AND B : A 이상 B 이하 범위가 아닌 것 지정
+SELECT
+    *
+FROM
+    tbl_menu
+WHERE
+    -- menu_price < 10000 OR menu_price > 25000
+    menu_price NOT BETWEEN 10000 AND 25000
+ORDER BY
+    menu_price ASC;
+
+
+
+
+/* LIKE 연산자
+ - 와일드카드를 이용해 문자열 패턴이 일치하면 조회
+ - % : 포함
+ - _ : 글자 개수
+*/
+
+-- %문자열 : 해당 문자열로 끝남
+SELECT
+    menu_name
+FROM
+    tbl_menu
+WHERE
+    menu_name LIKE '%아메리카노';
+
+-- 문자열% : 해당 문자열로 시작함
+SELECT
+    menu_name
+FROM
+    tbl_menu
+WHERE
+    menu_name LIKE '죽%';
+
+
+-- %문자열% : 해당 문자열이 포함(처음, 중간, 끝 관계 없음)
+SELECT
+    menu_name
+FROM
+    tbl_menu
+WHERE
+    menu_name LIKE '%마늘%';
+
+
+
+-- _ : 글자 개수
+SELECT
+    menu_name
+FROM
+    tbl_menu
+WHERE
+    menu_name LIKE '_____'; -- 5글자 메뉴명만 조회
+
+
+-- 마늘 앞에 꼭 1글자, 뒤에는 관계없음
+SELECT
+    menu_name
+FROM
+    tbl_menu
+WHERE
+    menu_name LIKE '_마늘%';
+
+
+-- NOT LIKE : 문자열 패턴이 일치하지 않는 데이터만 조회
+SELECT
+    menu_name
+FROM
+    tbl_menu
+WHERE
+    menu_name NOT LIKE '_마늘%';
+
+
+
+
+CREATE TABLE IF NOT EXISTS tbl_temp
+(
+    temp_code    INT AUTO_INCREMENT COMMENT '임시코드',
+    temp_email    VARCHAR(30) NOT NULL COMMENT '이메일',
+    PRIMARY KEY (temp_code)
+) ENGINE=INNODB COMMENT '임시테이블';
+
+INSERT INTO tbl_temp VALUES(1, 'sun_di@greedy.com');
+INSERT INTO tbl_temp VALUES(2, 'song_jk@greedy.com');
+INSERT INTO tbl_temp VALUES(3, 'no_oc@greedy.com');
+INSERT INTO tbl_temp VALUES(4, 'song_eh@greedy.com');
+INSERT INTO tbl_temp VALUES(5, 'yoo_js@greedy.com');
+
+COMMIT;
+/*
+    _, % 와일드카드 사용 시
+    문자열인지, 와일드카드 인지 구분해서 사용하는 방법
+    1) ESCAPE OPTION
+    2) \(백슬래시) ESCAPE 문자
+*/
+
+SELECT  *
+FROM  tbl_temp
+WHERE temp_email LIKE '____%'; -- 문제 발생
+
+-- ESCAPE OPTION을 이용해서 와일드카드 -> 문자열로 탈출
+SELECT  *
+FROM  tbl_temp
+WHERE temp_email LIKE '___#_%' ESCAPE '#';
+
+
+-- \(백슬래시) ESCAPE 문자
+SELECT  *
+FROM  tbl_temp
+WHERE temp_email LIKE '___\_%';
+
+
+
+/*  IN / NOT IN
+    - 찾는 값이 () 안에 있으면 결과에 포함
+     == OR 연산을 연달아 작성하는 효과
+*/
+
+SELECT
+    *
+FROM
+    tbl_menu
+WHERE
+    category_code = 4
+OR
+    category_code = 5
+OR
+    category_code = 6
+OR
+    category_code = 10
+ORDER BY
+    category_code ASC;
+
+
+SELECT
+    *
+FROM
+    tbl_menu
+WHERE
+    category_code IN (4,5,6,10);
+
+-- NOT : 부정
+SELECT
+    *
+FROM
+    tbl_menu
+WHERE
+    category_code NOT IN (4,5,6,10);
+
+
+/* NULL 관련 연산
+   - NULL == 빈칸 (값 x)
+    --> 비교 연산이 불가능하다!!!
+*/
+SELECT
+    *
+FROM
+    tbl_category
+WHERE
+    ref_category_code = NULL; -- 비교 연산 불가
+
+-- IS NULL : 해당 컬럼의 값이 NULL(빈칸)이면 TRUE -> 결과 포함
+SELECT
+    *
+FROM
+    tbl_category
+WHERE
+    ref_category_code IS NULL;
+
+-- IS NOT NULL : 해당 컬럼의 값이 NULL(빈칸) 아니면 TRUE -> 결과 포함
+SELECT
+    *
+FROM
+    tbl_category
+WHERE
+    ref_category_code IS NOT NULL;

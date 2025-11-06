@@ -5,6 +5,14 @@
     <file url="file://$PROJECT_DIR$/01_select.sql" value="e9e9aff8-6960-429c-8080-d4f4535e8751" />
     <file url="file://$PROJECT_DIR$/02_order_by.sql" value="e9e9aff8-6960-429c-8080-d4f4535e8751" />
     <file url="file://$PROJECT_DIR$/03_where.sql" value="e9e9aff8-6960-429c-8080-d4f4535e8751" />
+    <file url="file://$PROJECT_DIR$/04_distinct.sql" value="e9e9aff8-6960-429c-8080-d4f4535e8751" />
+    <file url="file://$PROJECT_DIR$/05_limit.sql" value="e9e9aff8-6960-429c-8080-d4f4535e8751" />
+    <file url="file://$PROJECT_DIR$/06_join.sql" value="aa024787-3b9d-4861-9e06-66d3293658cd" />
+    <file url="file://$PROJECT_DIR$/07_grouping.sql" value="e9e9aff8-6960-429c-8080-d4f4535e8751" />
+    <file url="file://$PROJECT_DIR$/08_subquery.sql" value="e9e9aff8-6960-429c-8080-d4f4535e8751" />
     <file url="file://$PROJECT_DIR$/db_script.sql" value="e9e9aff8-6960-429c-8080-d4f4535e8751" />
+    <file url="file://$PROJECT_DIR$/실습과제/SELECT_LIMIT_실습문제.sql" value="aa024787-3b9d-4861-9e06-66d3293658cd" />
+    <file url="file://$PROJECT_DIR$/실습과제/SELECT~WHERE_실습문제.sql" value="e9e9aff8-6960-429c-8080-d4f4535e8751" />
+    <file url="file://$PROJECT_DIR$/실습과제/employee.sql" value="aa024787-3b9d-4861-9e06-66d3293658cd" />
   </component>
 </project>
