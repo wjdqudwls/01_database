@@ -16,11 +16,16 @@
     <file url="file://$PROJECT_DIR$/13_ddl.sql" dialect="MariaDB" />
     <file url="file://$PROJECT_DIR$/14_constraints.sql" dialect="MariaDB" />
     <file url="file://$PROJECT_DIR$/15_build_in_functions.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/16_view.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/17_index.sql" dialect="MariaDB" />
     <file url="file://$PROJECT_DIR$/9_set_operators.sql" dialect="MariaDB" />
     <file url="file://$PROJECT_DIR$/db_script.sql" dialect="MariaDB" />
     <file url="file://$PROJECT_DIR$/실습관제/20251105_SET_OPERATORS까지.sql" dialect="MariaDB" />
     <file url="file://$PROJECT_DIR$/실습관제/SELECT_LIMIT_실습문제.sql" dialect="MariaDB" />
     <file url="file://$PROJECT_DIR$/실습관제/SELECT~WHERE_실습문제.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/실습관제/day3_question.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/실습관제/day4_question.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/실습관제/day5_question.sql" dialect="MariaDB" />
     <file url="file://$PROJECT_DIR$/실습관제/employee.sql" dialect="MariaDB" />
   </component>
 </project>
