@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$PROJECT_DIR$/00_계정생성.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/01_select.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/02_order_by.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/03_where.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/04.distinct.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/05.limit.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/06_join.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/07_grouping.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/08_subquery.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/09_set_operators.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/10_dml.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/11_transaction.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/12_datatype.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/13_ddl.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/14_constraints.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/15_bulit_in_function.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/16_view.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/17_index.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/18_procedure.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/19_trigger.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/Example/20251105_SET_OPERATORS까지.sql" value="230174ef-60fe-45cd-bf18-4928487bf5eb" />
+    <file url="file://$PROJECT_DIR$/Example/DAY3_Question_ChoiYeonhoo.sql" value="230174ef-60fe-45cd-bf18-4928487bf5eb" />
+    <file url="file://$PROJECT_DIR$/Example/DAY4_Question_ChoiYeonhoo.sql" value="230174ef-60fe-45cd-bf18-4928487bf5eb" />
+    <file url="file://$PROJECT_DIR$/Example/DAY5_Question_ChoiYeonhoo.sql" value="230174ef-60fe-45cd-bf18-4928487bf5eb" />
+    <file url="file://$PROJECT_DIR$/Example/SELECT_LIMIT실습문제.sql" value="230174ef-60fe-45cd-bf18-4928487bf5eb" />
+    <file url="file://$PROJECT_DIR$/Example/SELECT~WHERE_실습문제.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/Example/View~Trigger_Example.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/Example/employee.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/Example/종합문제sql해석.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+    <file url="file://$PROJECT_DIR$/db_script.sql" value="beee3274-8ad8-477b-b8a1-1abf9dc8c138" />
+  </component>
+</project>

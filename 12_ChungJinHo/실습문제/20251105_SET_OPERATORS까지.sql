@@ -164,7 +164,7 @@ select e.EMP_NAME `사원명`
   join location l
     on d.LOCATION_ID = l.LOCAL_CODE
  where l.NATIONAL_CODE = 'KO'
-   and e.SALARY > ( select avg(SALARY) from employee)
+   and e.SALARY > ( select avg(SALARY) from employee )
  order by e.SALARY;
 
 

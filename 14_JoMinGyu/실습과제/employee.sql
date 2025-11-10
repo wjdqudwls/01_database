@@ -17,13 +17,89 @@ DROP TABLE IF EXISTS LOCATION;
 DROP TABLE IF EXISTS NATIONAL;
 DROP TABLE IF EXISTS SAL_GRADE;
 
+-- DDL for Table JOB
+CREATE TABLE JOB
+(
+    JOB_CODE CHAR(2),
+    JOB_NAME VARCHAR(35),
+    PRIMARY KEY (JOB_CODE)
+);
+
+-- Insertions for JOB
+INSERT INTO JOB (JOB_CODE, JOB_NAME)
+VALUES ('J1', '대표'),
+       ('J2', '부사장'),
+       ('J3', '부장'),
+       ('J4', '차장'),
+       ('J5', '과장'),
+       ('J6', '대리'),
+       ('J7', '사원');
+
+
+-- DDL for Table SAL_GRADE
+CREATE TABLE SAL_GRADE
+(
+    SAL_LEVEL CHAR(2),
+    MIN_SAL   DECIMAL(10, 2),
+    MAX_SAL   DECIMAL(10, 2),
+    PRIMARY KEY (SAL_LEVEL)
+);
+
+-- Insertions for SAL_GRADE
+INSERT INTO SAL_GRADE (SAL_LEVEL, MIN_SAL, MAX_SAL)
+VALUES ('S1', 6000000, 10000000),
+       ('S2', 5000000, 5999999),
+       ('S3', 4000000, 4999999),
+       ('S4', 3000000, 3999999),
+       ('S5', 2000000, 2999999),
+       ('S6', 1000000, 1999999);
+
+
+-- DDL for Table NATIONAL
+CREATE TABLE NATIONAL
+(
+    NATIONAL_CODE CHAR(2),
+    NATIONAL_NAME VARCHAR(35),
+    PRIMARY KEY (NATIONAL_CODE)
+);
+
+-- Insertions for NATIONAL
+INSERT INTO NATIONAL (NATIONAL_CODE, NATIONAL_NAME)
+VALUES ('KO', '한국'),
+       ('JP', '일본'),
+       ('CH', '중국'),
+       ('US', '미국'),
+       ('RU', '러시아');
+
+
+-- DDL for Table LOCATION
+CREATE TABLE LOCATION
+(
+    LOCAL_CODE    CHAR(2),
+    NATIONAL_CODE CHAR(2) NOT NULL,
+    LOCAL_NAME    VARCHAR(40),
+    PRIMARY KEY (LOCAL_CODE),
+    FOREIGN KEY (NATIONAL_CODE)
+        REFERENCES NATIONAL(NATIONAL_CODE)
+);
+
+-- Insertions for LOCATION
+INSERT INTO LOCATION (LOCAL_CODE, NATIONAL_CODE, LOCAL_NAME)
+VALUES ('L1', 'KO', 'ASIA1'),
+       ('L2', 'JP', 'ASIA2'),
+       ('L3', 'CH', 'ASIA3'),
+       ('L4', 'US', 'AMERICA'),
+       ('L5', 'RU', 'EU');
+
 -- DDL for Table DEPARTMENT
 CREATE TABLE DEPARTMENT
 (
     DEPT_ID     CHAR(2),
     DEPT_TITLE  VARCHAR(35),
     LOCATION_ID CHAR(2) NOT NULL,
-    PRIMARY KEY (DEPT_ID)
+    PRIMARY KEY (DEPT_ID),
+    FOREIGN KEY (LOCATION_ID)
+        REFERENCES LOCATION(LOCAL_CODE)
 );
 
 -- Insertions for DEPARTMENT
@@ -55,7 +131,13 @@ CREATE TABLE EMPLOYEE
     HIRE_DATE  DATE,
     ENT_DATE   DATE,
     ENT_YN     CHAR(1) DEFAULT 'N',
-    PRIMARY KEY (EMP_ID)
+    PRIMARY KEY (EMP_ID),
+    FOREIGN KEY (DEPT_CODE)
+        REFERENCES DEPARTMENT(DEPT_ID),
+    FOREIGN KEY (JOB_CODE)
+        REFERENCES JOB(JOB_CODE),
+    FOREIGN KEY (SAL_LEVEL)
+        REFERENCES SAL_GRADE(SAL_LEVEL)
 );
 
 -- Insertions for EMPLOYEE
@@ -109,74 +191,59 @@ VALUES ('200', '선동일', '621235-1985634', 'sun_di@greedy.com', '01099546325'
        ('222', '이태림', '760918-2854697', 'lee_tr@greedy.com', '01033000002', 'D8', 'J6', 'S5', 2436240, 0.35, '100',
         CAST('1994/01/20' AS DATE), CAST('2017/9/17' AS DATE), 'Y');
 
--- DDL for Table JOB
-CREATE TABLE JOB
-(
-    JOB_CODE CHAR(2),
-    JOB_NAME VARCHAR(35),
-    PRIMARY KEY (JOB_CODE)
-);
-
--- Insertions for JOB
-INSERT INTO JOB (JOB_CODE, JOB_NAME)
-VALUES ('J1', '대표'),
-       ('J2', '부사장'),
-       ('J3', '부장'),
-       ('J4', '차장'),
-       ('J5', '과장'),
-       ('J6', '대리'),
-       ('J7', '사원');
-
--- DDL for Table LOCATION
-CREATE TABLE LOCATION
-(
-    LOCAL_CODE    CHAR(2),
-    NATIONAL_CODE CHAR(2) NOT NULL,
-    LOCAL_NAME    VARCHAR(40),
-    PRIMARY KEY (LOCAL_CODE)
-);
-
--- Insertions for LOCATION
-INSERT INTO LOCATION (LOCAL_CODE, NATIONAL_CODE, LOCAL_NAME)
-VALUES ('L1', 'KO', 'ASIA1'),
-       ('L2', 'JP', 'ASIA2'),
-       ('L3', 'CH', 'ASIA3'),
-       ('L4', 'US', 'AMERICA'),
-       ('L5', 'RU', 'EU');
-
--- DDL for Table NATIONAL
-CREATE TABLE NATIONAL
-(
-    NATIONAL_CODE CHAR(2),
-    NATIONAL_NAME VARCHAR(35),
-    PRIMARY KEY (NATIONAL_CODE)
-);
-
--- Insertions for NATIONAL
-INSERT INTO NATIONAL (NATIONAL_CODE, NATIONAL_NAME)
-VALUES ('KO', '한국'),
-       ('JP', '일본'),
-       ('CH', '중국'),
-       ('US', '미국'),
-       ('RU', '러시아');
-
--- DDL for Table SAL_GRADE
-CREATE TABLE SAL_GRADE
-(
-    SAL_LEVEL CHAR(2),
-    MIN_SAL   DECIMAL(10, 2),
-    MAX_SAL   DECIMAL(10, 2),
-    PRIMARY KEY (SAL_LEVEL)
-);
-
--- Insertions for SAL_GRADE
-INSERT INTO SAL_GRADE (SAL_LEVEL, MIN_SAL, MAX_SAL)
-VALUES ('S1', 6000000, 10000000),
-       ('S2', 5000000, 5999999),
-       ('S3', 4000000, 4999999),
-       ('S4', 3000000, 3999999),
-       ('S5', 2000000, 2999999),
-       ('S6', 1000000, 1999999);
 
 -- Committing the changes
 COMMIT;
+
+-- why we use view
+create view if not exists v_emp as
+select e.EMP_ID, e.EMP_NAME, e.SALARY,
+       d.DEPT_TITLE, j.JOB_NAME, l.LOCAL_NAME, n.NATIONAL_NAME
+from employee e
+    join department d on e.DEPT_CODE = d.DEPT_ID
+    join job j on e.JOB_CODE = j.JOB_CODE
+    join LOCATION l on d.LOCATION_ID = l.LOCAL_CODE
+    join national n on l.NATIONAL_CODE = n.NATIONAL_CODE
+order by e.EMP_ID;
+
+select
+    emp_id, emp_name, dept_title, job_name, LOCAL_NAME
+from
+    v_emp
+where
+    DEPT_TITLE like '%영업%';
+
+-- (2) 뷰에 포함되지 않은 컬럼 중 베이스 테이블에 not null 조건이 있는 경우
+
+-- tbl_menu_notnull 구조
+CREATE TABLE tbl_menu_notnull (
+  menu_code INT PRIMARY KEY,
+  menu_name VARCHAR(30) NOT NULL,
+  menu_price INT NOT NULL,           -- NOT NULL
+  category_code INT NOT NULL,        -- NOT NULL
+  orderable_status CHAR(1) NOT NULL
+);
+
+
+-- VIEW에서 menu_price 제외
+CREATE VIEW view_menu_no_price AS
+SELECT menu_code, menu_name, category_code, orderable_status
+FROM tbl_menu_notnull;
+
+
+-- INSERT 실패
+INSERT INTO view_menu_no_price VALUES (NULL, '메뉴', 4, 'Y');
+-- 에러: menu_price는 NOT NULL인데 값이 없음!
+
+drop view if exists hansik;
+
+CREATE OR REPLACE VIEW hansik AS
+SELECT
+       menu_code AS '메뉴코드'
+     , menu_name '메뉴명'
+     , category_name '카테고리명'
+  FROM tbl_menu a
+  JOIN tbl_category b ON a.category_code = b.category_code
+ WHERE b.category_name = '한식';
+
+SELECT * FROM hansik;

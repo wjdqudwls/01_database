@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/00_계정생성.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/01_select.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/02_order_by.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/03_where.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/04.distinct.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/05.limit.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/06_join.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/07_grouping.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/08_subquery.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/09_set_operators.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/10_dml.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/11_transaction.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/12_datatype.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/13_ddl.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/14_constraints.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/15_bulit_in_function.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/16_view.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/17_index.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/18_procedure.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/19_trigger.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/Example/20251105_SET_OPERATORS까지.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/Example/DAY3_Question_ChoiYeonhoo.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/Example/DAY4_Question_ChoiYeonhoo.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/Example/DAY5_Question_ChoiYeonhoo.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/Example/SELECT_LIMIT실습문제.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/Example/SELECT~WHERE_실습문제.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/Example/View~Trigger_Example.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/Example/employee.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/Example/종합문제sql해석.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/db_script.sql" dialect="MariaDB" />
+    <file url="PROJECT" dialect="MariaDB" />
+  </component>
+</project>

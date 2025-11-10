@@ -1,13 +1,11 @@
 /* 12_DATA TYPE
-
    1. 명시적 형변환
    - CAST(expression AS 데이터형식 [(길이)])
    - CONVERT(expression, 데이터형식 [(길이)])
-
 */
 
 SELECT AVG(menu_price)
-FROM tbl_menu
+FROM tbl_menu;
 
 -- CAST()를 이용한 형변환 (ANSI 표준)
 -- (참고) 실수 -> 정수 변환 시 소수점 반올림 자동 수행
@@ -65,3 +63,23 @@ SELECT 3 > 'MAY';    -- 문자는 0으로 변환된다.
 SELECT 5 > '6MAY';   -- 문자에서 첫번째로 나온 숫자는 정수로 전환된다.
 SELECT 5 > 'M6AY';   -- 숫자가 뒤에 나오면 문자로 인식되어 0으로 변환된다.
 SELECT NOW()'2 023-5-30';  -- 날짜형으로 바뀔 수 있는 문자는 DATE형으로 변환된다.
+
+
+CREATE TABLE IF NOT EXISTS tb5 (
+    pk INT AUTO_INCREMENT PRIMARY KEY ,
+    fk INT,
+    col VARCHAR(255),
+    CHECK (col IN ('Y', 'N') )
+) ENGINE = INNODB;
+
+INSERT INTO tb5 VALUES (null, 20, 'Y');
+INSERT INTO tb5 VALUES (null, 10, 'Y');
+
+DESCRIBE tb5;
+
+select * from tb5;
+
+ALTER TABLE tb5
+MODIFY pk INt ;
+
+select * from tb5;
