@@ -130,6 +130,16 @@ WHERE E.SALARY > (SELECT AVG(TEMP.SALARY)
 
 -- 12. 모든 부서의 부서명과 해당 부서에 소속된 직원 수를 조회하시오.
 -- 직원이 없는 부서도 함께 표시하시오. (9행)
+
+-- 복습
+SELECT D.DEPT_TITLE, COUNT(E.EMP_NO)
+FROM employee E
+RIGHT JOIN department D ON E.DEPT_CODE = D.DEPT_ID
+GROUP BY D.DEPT_TITLE;
+
+
+
+
 SELECT D.DEPT_TITLE 부서명, COUNT(*)
 FROM employee E
          JOIN department D ON E.DEPT_CODE = D.DEPT_ID

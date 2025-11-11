@@ -220,8 +220,9 @@ SELECT
 SELECT
     `메뉴명`, `카테고리명`
 FROM (
-    SELECT menu_name AS '메뉴명',
-    category_name AS '카테고리명'
+    SELECT
+        menu_name AS '메뉴명',
+        category_name AS '카테고리명'
     FROM tbl_menu a
     JOIN tbl_category b
 ON a.category_code = b.category_code

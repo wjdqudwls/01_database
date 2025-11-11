@@ -24,3 +24,5 @@ ROLLBACK;
 select * from tbl_menu;
 update tbl_menu set menu_code = 7 where menu_code = 29;
 insert into tbl_menu values(null, '민트미역국', 15000,4,'Y')
+
+

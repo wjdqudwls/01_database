@@ -339,7 +339,7 @@ VALUES (NULL, DEFAULT, DEFAULT, DEFAULT, DEFAULT);
 
 UPDATE tbl_country
 SET country_name = DEFAULT,
-    population = DEFAULT,
-    add_day = DEFAULT,
-    add_time = DEFAULT
+    population   = DEFAULT,
+    add_day      = DEFAULT,
+    add_time     = DEFAULT
 WHERE country_code = 1;

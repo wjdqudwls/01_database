@@ -12,11 +12,11 @@ GRANT  ALL PRIVILEGES ON employeedb.* TO 'practice'@'%';
 -- 4. 권한 확인
 SHOW GRANTS FOR 'practice'@'%';
 
+-- Dropping existing tables if they exist
 
 -- ------------------------------------------------------
--- (practice 계정으로 전환)
 
--- Dropping existing tables if they exist
+-- (practice 계정으로 전환)
 DROP TABLE IF EXISTS EMPLOYEE;
 DROP TABLE IF EXISTS DEPARTMENT;
 DROP TABLE IF EXISTS JOB;
