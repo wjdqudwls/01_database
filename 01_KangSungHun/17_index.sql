@@ -1,4 +1,5 @@
 /* 17_INDEX : 데이터 검색(SELECT) 속도 향상에 사용되는 객체 */
+
 CREATE TABLE phone
 (
     phone_code  INT PRIMARY KEY,
@@ -15,12 +16,20 @@ VALUES (1, 'galaxyS23', 1200000),
 SELECT *
 FROM phone;
 
-/* EXPLAIN
-   - 쿼리 실행 계획 분석용 명령어
-*/
 EXPLAIN
 SELECT *
-FROM phone;
+FROM phone
+WHERE phone_name = 'galaxyS23';
+
+CREATE INDEX idx_name ON phone (phone_name);
+EXPLAIN
+SELECT *
+FROM phone
+WHERE phone_name = 'galaxyS23';
+
+/* EXPLAIN
+   - 쿼리 실행 계획 분석용 명령어
+ */
 
 -- 인덱스 생성 (phone_name 컬럼)
 CREATE INDEX idx_name
@@ -31,38 +40,26 @@ CREATE INDEX idx_name
 EXPLAIN
 SELECT *
 FROM phone
-WHERE phone_name = 'galaxyS23';
+WHERE PHONE_name = 'galaxyS23';
 
 -- INDEX 삭제
 DROP INDEX idx_name ON phone;
 
 EXPLAIN
 SELECT *
-FROM phone
-WHERE phone_name = 'galaxyS23';
-
-EXPLAIN
-SELECT *
 FROM tbl_menu a
-         JOIN
-     tbl_category b
-     ON (a.category_code = b.category_code)
+         JOIN tbl_category b ON (a.category_code = b.category_code)
 WHERE category_name = (SELECT category_name
                        FROM tbl_category
                        WHERE a.category_code = 4);
 
-
--- 데이터베이스(==SCHEMA)에 존재하는 인덱스 모두 조회
+-- 데이터 베이스에 존재하는 인덱스 모두 조회
 SELECT *
 FROM information_schema.STATISTICS
 WHERE TABLE_SCHEMA = 'menudb';
 
 -- 특정 테이블의 인덱스 조회
-SHOW INDEX FROM employee;
-
-
--- 인덱스 생성
-CREATE INDEX idx_name ON phone (phone_name);
+SHOW INDEX FROM EMPLOYEE;
 
 -- 인덱스 최적화를 위한 재구성
 ALTER TABLE phone
@@ -70,9 +67,7 @@ ALTER TABLE phone
 ALTER TABLE phone
     ADD INDEX idx_name (phone_name);
 
-
--- 인덱스 속도 체험
-
+-- 인덱스를 이용한 속도 향상 확인
 -- 1. 테이블 생성
 DROP TABLE if exists students;
 CREATE TABLE students
@@ -96,46 +91,51 @@ BEGIN
 
     WHILE i <= 100000
         DO
+            -- 나이: 18~25 랜덤
+            SET random_age = 18 + FLOOR(RAND() * 8);
 
-        SET i = i + 1;
-    END WHILE;
+            -- 학점: A, B, C, D, F 중 랜덤
+            SET random_grade = ELT(FLOOR(1 + RAND() * 5), 'A', 'B', 'C', 'D', 'F');
+
+            INSERT INTO students (id, name, age, grade)
+            VALUES (i,
+                    CONCAT('학생', LPAD(i, 5, '0')), -- 학생00001, 학생00002, ...
+                    random_age,
+                    random_grade);
+
+            SET i = i + 1;
+        END WHILE;
 END$$
 
 DELIMITER ;
-
 
 -- 3. 프로시저 실행
 CALL insert_sample_students();
 
 -- 4. 확인
-SELECT COUNT(*)
-FROM students;
+SELECT COUNT()
+FROM students(
 
 
-SELECT *
+SELECT
 FROM students
 LIMIT 10;
 
--- 인덱스 사용 X
+-- 인덱스 사용x
 select *
 from students
 where name = '학생49723';
-
--- 인덱스 사용 O
 select *
 from students
-where id = 49723;
+where id = 46723;
+
+-- 인덱스 사용 o
+select *
+from students
+where id = 50000;
 
 
 -- 5. 프로시저 삭제 (정리)
 DROP PROCEDURE insert_sample_students;
 
 DROP TABLE students;
-
-
-
-
-
-
-
-

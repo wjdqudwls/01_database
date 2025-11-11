@@ -199,3 +199,18 @@ where me like '%마늘%';   -- 메인쿼리
 -- command + shift + / > 여러줄 주석
 
 -- result set : select 결과 집합
+
+
+select * from tbl_menu where category_code = 12;
+
+select * from tbl_category;
+
+
+select category_code from tbl_category where ref_category_code = 3;
+
+
+-- ref_category_code가 3인 menu_name을 조회하라 ,  11,12
+    select * from tbl_category;
+
+    select * from tbl_menu;
+
