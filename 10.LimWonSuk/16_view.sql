@@ -155,6 +155,8 @@ VALUES (1,
 
 -- VIEW 삭제
 DROP VIEW hansik;
+
+DROP TABLE hansik;
 -- DORP : 데이터베이스 객체 제거
 
 CREATE OR REPLACE VIEW hansik AS

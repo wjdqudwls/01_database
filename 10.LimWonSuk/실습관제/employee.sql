@@ -213,5 +213,3 @@ VALUES ('200', '선동일', '621235-1985634', 'sun_di@greedy.com', '01099546325'
 
 -- Committing the changes
 COMMIT;
-employee.sql
-9KB
