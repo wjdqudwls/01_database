@@ -110,6 +110,7 @@ CREATE TABLE salary_history (
 DESC salary_history;
 
 
+
 -- TRIGGER 생성
 /*
 

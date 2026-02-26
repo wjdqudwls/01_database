@@ -1,4 +1,12 @@
-/*  17_INDEX : 데이터 검색(SELECT) 속도 향상에 사용되는 객체 */
+/*
+@@@@중요
+    Index
+    데이터 검색(SELECT) 속도 향상에 사용되는 객체
+    -> CUD 적은 테이블에 사용
+    -> ex) 실시간 검색
+    책의 목차 생각하면 됨
+ */
+
 CREATE TABLE phone (
     phone_code INT PRIMARY KEY,
     phone_name VARCHAR(100),
@@ -14,57 +22,64 @@ VALUES
 
 SELECT * FROM phone;
 
-/* EXPLAIN : 설명하다
-   - 쿼리 실행 계획 분석용 명령어 (SELECT UPDATE DELETE에 사용)
+/*
+    EXPLAIN
+    쿼리 실행 계획 분석용 명령어
 */
 EXPLAIN SELECT * FROM phone;
+-- possible_key, key, key_len -> null
 
--- 인덱스 생성 (phone_name 컬럼)
-CREATE INDEX IF NOT EXISTS  idx_name
-ON phone(phone_name); -- phone_name에 대한 인덱스 생성
+
+-- index 생성(phone_name 컬럼)
+CREATE INDEX idx_name
+ON phone(phone_name);
+-- phone_name에 대한 인덱스 생성
 
 -- 인덱스를 사용해서 조회
 EXPLAIN SELECT * FROM phone
-WHERE phone_name = 'galaxy23';
+WHERE phone_name = 'galaxyS23';
 
--- 인덱스 삭제
+-- INDEX 삭제
 DROP INDEX idx_name ON phone;
 
--- 재조회
 EXPLAIN SELECT * FROM phone
-WHERE phone_name = 'galaxy23';
-
+WHERE phone_name = 'galaxyS23';
 
 EXPLAIN
-SELECT *
+SELECT
+    *
 FROM
     tbl_menu a
-JOIN tbl_category b ON(a.category_code = b.category_code)
+JOIN tbl_category b
+ON(a.category_code = b.category_code)
 WHERE
     category_name = (SELECT category_name
                      FROM tbl_category
-                     WHERE a.category_code = 4);
+                     WHERE a.category_code = 4
+                     );
 
-
--- 데이터베이스에(==SCHEMA) 존재하는 인덱스 모두 조회 (name 보다는 code를 조회하는게 속도가 빠름)
-SELECT * FROM information_schema.STATISTICS
-WHERE TABLE_SCHEMA = 'menudb';
-
+-- 데이터베이스(=SCHEMA)에 존재하는 인덱스 모두 조회
+SELECT
+    *
+FROM information_schema.STATISTICS
+WHERE
+    TABLE_SCHEMA = 'menudb';
 
 -- 특정 테이블의 인덱스 조회
+SHOW INDEX FROM tbl_menu;
 SHOW INDEX FROM employee;
 
-
-
-CREATE INDEX idx_name ON phone(phone_name); -- phone_name에 대한 인덱스 생성
+-- 인덱스 생성
+CREATE INDEX idx_name
+ON phone(phone_name);
 
 -- 인덱스 최적화를 위한 재구성
 ALTER TABLE phone DROP INDEX idx_name;
 ALTER TABLE phone ADD INDEX idx_name(phone_name);
 
-
--- 인덱스 속도 체험
-
+/*
+    @@@인덱스를 이용한 속도향상 확인
+ */
 -- 1. 테이블 생성
 DROP TABLE if exists students;
 CREATE TABLE students (
@@ -73,7 +88,6 @@ CREATE TABLE students (
                           age INT,
                           grade VARCHAR(10)
 );
-
 SHOW INDEX FROM students;
 
 -- 2. 학생 10만명 데이터 생성 프로시저
@@ -111,23 +125,15 @@ CALL insert_sample_students();
 
 -- 4. 확인
 SELECT COUNT(*) FROM students;
-SELECT COUNT(*) FROM students LIMIT 10;
+SELECT * FROM students LIMIT 10;
 
 -- 인덱스 사용 X
-select * from students where name = '학생49723';
+select * from students where name = '학생49723'; -- 27ms
 
--- 인텍스 사용 O
-select * from students where id = 49723;
-
+-- 인덱스 사용 O
+select * from students where id = 49723; -- 5ms
 
 -- 5. 프로시저 삭제 (정리)
 DROP PROCEDURE insert_sample_students;
 
 DROP TABLE students;
-
-
-
-
-
-
-

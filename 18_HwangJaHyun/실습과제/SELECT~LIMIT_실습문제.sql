@@ -55,7 +55,9 @@ SELECT
 FROM
     employee
 WHERE
-    DEPT_CODE = 'D6';
+    DEPT_CODE = 'D6'
+AND
+    SALARY > 3000000;
 
 
 -- 8. 보너스를 받지 않는 사원의 사번, 이름, 급여, 보너스 조회
